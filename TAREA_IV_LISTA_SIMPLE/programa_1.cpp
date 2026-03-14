@@ -8,13 +8,16 @@ struct Nodo {
 
 int main() {
 
+
     Nodo* head = NULL;
     Nodo* actual = NULL;
 
     int valor;
     char opcion = 's';
 
+
     while(opcion == 's'){
+    cout << endl;
     cout << "Ingrese un numero: ";
     cin >> valor;
 
@@ -33,17 +36,19 @@ int main() {
         cout << "Desea ingresar otro numero? (s/n): ";
         cin >> opcion;
     }
+    cout << endl;
 
     Nodo* temp = head;
     while(temp != NULL) {
         cout << temp->dato << " -> ";
         temp = temp->siguiente;
     }
-    cout << "NULL"<< endl;
-
-    cout << endl;
-    cout << "NOMBRE: ERICKA DANIELA CALDERA GOMEZ";
+    cout << "NULL"<<endl;
+    cout<< "-------------------------------------" << endl;
+    cout << "NOMBRE: ERICKA DANIELA CALDERA GOMEZ" << endl;
+    cout<< "-------------------------------------";
 
     return 0;
+
 
 }
