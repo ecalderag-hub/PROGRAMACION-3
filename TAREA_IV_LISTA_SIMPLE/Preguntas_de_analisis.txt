@@ -1,1 +1,22 @@
+1. ¿Qué función cumple el puntero actual?
+El puntero actual se utiliza para mantener referencia al último nodo de la lista.
+Su función es permitir que cada nuevo nodo que se crea se agregue al final de la lista.
 
+2. ¿Qué ocurriría si se elimina la línea que asigna nuevo->siguiente = NULL?
+Si se elimina:
+-El puntero siguiente tendría un valor basura de memoria.
+-El programa podría intentar seguir una dirección de memoria inválida.
+-El recorrido de la lista podría:
+*mostrar valores incorrectos
+*entrar en un ciclo infinito
+*provocar un error del programa (crash)
+Por eso siempre se inicializa en NULL.
+
+3. Explique cómo se conectan los nodos dentro de la lista.
+Los nodos se conectan mediante el puntero siguiente.
+Cada nodo guarda:
+*un dato
+*la dirección del siguiente nodo
+Cuando se agrega un nodo:
+- El nodo anterior apunta al nuevo nodo
+- Luego el nuevo nodo se convierte en el último
