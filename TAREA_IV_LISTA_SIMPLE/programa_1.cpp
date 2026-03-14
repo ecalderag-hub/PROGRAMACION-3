@@ -8,13 +8,11 @@ struct Nodo {
 
 int main() {
 
-
     Nodo* head = NULL;
     Nodo* actual = NULL;
 
     int valor;
     char opcion = 's';
-
 
     while(opcion == 's'){
     cout << endl;
