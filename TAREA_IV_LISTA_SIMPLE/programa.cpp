@@ -8,7 +8,6 @@ struct Nodo {
 
 int main() {
 
-
     Nodo* head = NULL;
     Nodo* actual = NULL;
 
