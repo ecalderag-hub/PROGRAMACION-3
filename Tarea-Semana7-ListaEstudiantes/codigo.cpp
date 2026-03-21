@@ -131,7 +131,7 @@ void eliminar(Nodo*& head) {
     delete actual; // uso de memoria dinámica
     cout << "Estudiante encontrado en la lista ha sido eliminado.\n";
 }
-//6.MENU INTERACTIVO Y OPCION SALIR
+//6.MENU
 int main() {
     //MOSTRAR NOMBRE DEL ESTUDIANTE
     cout<<endl;
