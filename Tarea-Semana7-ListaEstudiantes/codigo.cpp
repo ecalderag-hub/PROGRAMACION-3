@@ -142,11 +142,11 @@ int main() {
 
     do {
         cout << "\n--- MENU ---\n";
-        cout << "1. Insertar inicio\n";
-        cout << "2. Insertar final\n";
-        cout << "3. Mostrar\n";
-        cout << "4. Buscar\n";
-        cout << "5. Eliminar\n";
+        cout << "1. Insertar estudiante al inicio\n";
+        cout << "2. Insertar estudiante al final\n";
+        cout << "3. Mostrar lista de estudiantes\n";
+        cout << "4. Buscar estudiante\n";
+        cout << "5. Eliminar estudiante\n";
         cout << "6. Salir\n";
         cout << "Opcion: ";
         cin >> opcion;
