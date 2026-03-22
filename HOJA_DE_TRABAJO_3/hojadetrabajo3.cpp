@@ -27,7 +27,7 @@ void pop(){
         return;
     }
     Nodo* temp = tope;
-    cout << "Accion eliminada" << temp->dato << endl;
+    cout << "Accion eliminada " << temp->dato << endl;
 
     tope = tope->siguiente;
     delete temp;
