@@ -24,7 +24,8 @@ cin >> nuevo->nombre;
 cout << "Ingrese apellido: ";
 cin >> nuevo->apellido;
 cout << "Ingrese carrera: ";
-cin >> nuevo->carrera;
+cin.ignore();
+getline(cin, nuevo->carrera);
 
 nuevo->siguiente = head;
 head = nuevo;
@@ -35,18 +36,19 @@ cout << "Estudiante agregado al inicio.\n";
 //2.INGRESAS ESTUDIANTE AL FINAL
 void insertarFinal(Nodo*& head) {
 
-    Nodo* nuevo = new Nodo;
+Nodo* nuevo = new Nodo;
 
-    cout << "Ingrese carne: ";
-    cin >> nuevo->carne;
-    cout << "Ingrese nombre: ";
-    cin >> nuevo->nombre;
-    cout << "Ingrese apellido: ";
-    cin >> nuevo->apellido;
-    cout << "Ingrese carrera: ";
-    cin >> nuevo->carrera;
+cout << "Ingrese carne: ";
+cin >> nuevo->carne;
+cout << "Ingrese nombre: ";
+cin >> nuevo->nombre;
+cout << "Ingrese apellido: ";
+cin >> nuevo->apellido;
+cout << "Ingrese carrera: ";
+cin.ignore();
+getline(cin, nuevo->carrera);
 
-    nuevo->siguiente = NULL;
+nuevo->siguiente = NULL;
 
     if(head == NULL) {
         head = nuevo;
@@ -57,7 +59,6 @@ void insertarFinal(Nodo*& head) {
         }
         actual->siguiente = nuevo;
     }
-
     cout << "Estudiante agregado al final.\n";
 }
 
@@ -72,7 +73,7 @@ void mostrar(Nodo* head) {
     Nodo* recorrido = head;
 
     while(recorrido != NULL) {
-        cout << "Carné: " << recorrido->carne << endl;
+        cout << "Carne: " << recorrido->carne << endl;
         cout << "Nombre: " << recorrido->nombre << endl;
         cout << "Apellido: " << recorrido->apellido << endl;
         cout << "Carrera: " << recorrido->carrera << endl;
@@ -93,15 +94,19 @@ void mostrar(Nodo* head) {
 
     while(recorrido != NULL) {
 
-        if(recorrido->carne == valor) {
-            cout << "Numero encontrado.\n";
+     if(recorrido->carne == valor) {
+        cout << "\n Numero encontrado:\n";
+        cout << "Carne: " << recorrido->carne << endl;
+        cout << "Nombre: " << recorrido->nombre << endl;
+        cout << "Apellido: " << recorrido->apellido << endl;
+        cout << "Carrera: " << recorrido->carrera << endl;
+        cout << "----------------------\n";
             return;
         }
         recorrido = recorrido->siguiente;
     }
     cout << "Numero no encontrado.\n";
 }
-
 //5.ELIMINAR ESTUDIANTE CON NUMERO DE CARNE
 void eliminar(Nodo*& head) {
 
@@ -141,7 +146,7 @@ int main() {
     int opcion;
 
     do {
-        cout << "\n--- MENU ---\n";
+        cout << "\n----------- MENU -----------\n";
         cout << "1. Insertar estudiante al inicio\n";
         cout << "2. Insertar estudiante al final\n";
         cout << "3. Mostrar lista de estudiantes\n";
@@ -174,7 +179,4 @@ int main() {
 
     return 0;
 }
-
-
-
 
