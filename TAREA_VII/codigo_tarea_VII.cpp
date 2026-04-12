@@ -235,6 +235,10 @@ int main(){
                 cout << "Lista ordenada\n";
                 break;
 
+            case 11:
+              cout << "Liberando memoria y saliendo...\n";
+              break;
+
         }
 
     }while(opcion != 11);
