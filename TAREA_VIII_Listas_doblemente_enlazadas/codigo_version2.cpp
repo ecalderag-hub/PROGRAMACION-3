@@ -192,7 +192,7 @@ int main() {
                 break;
 
             case 4:
-                mostrarAtras(head);
+                mostrarAtras(tail);
                 break;
 
             case 5:
