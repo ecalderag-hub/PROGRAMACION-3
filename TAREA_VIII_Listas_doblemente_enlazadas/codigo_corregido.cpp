@@ -67,12 +67,12 @@ void mostrarAtras(Nodo* head) {
 
     Nodo* temp = head;
 
-    while (temp != NULL) {
+    while (temp ->siguiente != NULL) {
         temp = temp->siguiente;
     }
 
     cout << "\nLista hacia atras: ";
-    while (temp->siguiente != NULL) {
+    while (temp != NULL) {
         cout << temp->dato << " <-> ";
         temp = temp->anterior;
     }
